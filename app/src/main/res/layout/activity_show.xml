@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="#484E61"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+    
+        <Button
+        android:id="@+id/show_bt_switch"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/add2"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+        
+        <TextView
+            android:id="@+id/show_tv_city_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:text=""
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            android:id="@+id/show_bt_refresh"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/refresh2"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/show_tv_now"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#fff"
+                android:text="当前气温："
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/show_tv_nowInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text=""
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/show_tv_today"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="今日气温："
+                android:textColor="#fff"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/show_tv_todayInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:text=""
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/show_tv_future"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="#fff"
+                android:text="未来几日气温："
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/show_tv_futureInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

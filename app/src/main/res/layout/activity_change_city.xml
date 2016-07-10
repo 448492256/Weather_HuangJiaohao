@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#484E61">
+
+        <Button
+            android:id="@+id/change_city_bt_pick"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add2"/>
+
+
+        <EditText
+            android:id="@+id/change_city_et_write"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:maxLines="1"
+            android:hint="请输入要查找的城市"
+            />
+
+        <Button
+            android:id="@+id/change_city_bt_search"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/search"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"/>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/change_city_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+</LinearLayout>
