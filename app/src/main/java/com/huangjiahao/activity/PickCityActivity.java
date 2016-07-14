@@ -66,7 +66,7 @@ public class PickCityActivity extends Activity { //选择城市的类
         setContentView(R.layout.activity_pick_city);
         Intent intent = getIntent();
         provinceName = intent.getStringExtra("putData");
-        final String adress = "http://v.juhe.cn/weather/citys?key=8ee574b503af6d884abefb9b34529edf"; //请求得到城市列表的地址
+        final String adress = "http://v.juhe.cn/weather/citys?key=e3f3e3e2887d9512713dea4dfcfa5786"; //请求得到城市列表的地址
         new Thread(new Runnable() {
             @Override
             public void run() { //开启线程发起网络请求

@@ -24,7 +24,7 @@ public class ToGetHttpAdress {
 
     public static String excute(String cityName){
         String city = toURLEncoded(cityName);
-        String url= "http://v.juhe.cn/weather/index?cityname="+city+"&dtype=json&format=2&key=8ee574b503af6d884abefb9b34529edf"; //拼装成所需格式
+        String url= "http://v.juhe.cn/weather/index?cityname="+city+"&dtype=json&format=2&key=e3f3e3e2887d9512713dea4dfcfa5786"; //拼装成所需格式
         return url;
     }
 

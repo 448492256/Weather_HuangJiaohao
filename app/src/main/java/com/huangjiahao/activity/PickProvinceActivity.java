@@ -29,10 +29,10 @@ import java.util.List;
 /**
  * Created by ASUS on 2016/6/2.
  */
-public class PickProvinceActivity extends Activity { //选择城市的活动
+    public class PickProvinceActivity extends Activity { //选择城市的活动
 
-    public static final  int SHOW_RESPONSE = 0;//用于handler判断要进行的操作
-    public static final int ERROR_RESPONSE = 1;
+        public static final  int SHOW_RESPONSE = 0;//用于handler判断要进行的操作
+        public static final int ERROR_RESPONSE = 1;
 
     private ListView mPickPronviceLv;
 
@@ -68,7 +68,7 @@ public class PickProvinceActivity extends Activity { //选择城市的活动
     protected void onCreate(Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_pick_province);
-        final String adress = "http://v.juhe.cn/weather/citys?key=8ee574b503af6d884abefb9b34529edf"; //发送网络请求返回城市列表的地址
+        final String adress = "http://v.juhe.cn/weather/citys?key=e3f3e3e2887d9512713dea4dfcfa5786"; //发送网络请求返回城市列表的地址
 
         new Thread(new Runnable() {
             @Override
@@ -78,7 +78,7 @@ public class PickProvinceActivity extends Activity { //选择城市的活动
                     public void onFinish(String response) {
                         Message message = new Message();
                         message.what = SHOW_RESPONSE;
-                        message.obj = response.toString();
+                        message.obj = response;
                         handler.sendMessage(message);//发送消息到消息队列
                     }
 
