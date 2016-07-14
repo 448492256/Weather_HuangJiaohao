@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.huangjiahao.R;
+import com.huangjiahao.adapter.MyPickCityAdapter;
 import com.huangjiahao.adapter.PickCityAdapter;
 import com.huangjiahao.bean.City;
 import com.huangjiahao.util.HttpCallbackListener;
@@ -37,7 +38,7 @@ public class PickCityActivity extends Activity { //选择城市的类
                     String response = (String) msg.obj;
                     ArrayList<City> arr = JsonDecode.CityDecode(response);
                     final ArrayList<City> list = ListChange.toGetCityChange(arr,provinceName);
-                    PickCityAdapter adapter = new PickCityAdapter(PickCityActivity.this,R.layout.pick_city_item,list);
+                    MyPickCityAdapter adapter = new MyPickCityAdapter(PickCityActivity.this, list);
                     mPickCityLv = (ListView) findViewById(R.id.pick_city_lv);
                     mPickCityLv.setAdapter(adapter);
                     mPickCityLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {

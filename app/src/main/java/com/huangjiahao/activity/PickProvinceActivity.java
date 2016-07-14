@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.huangjiahao.R;
+import com.huangjiahao.adapter.MyPickProvinceAdapter;
 import com.huangjiahao.adapter.PickProvinceAdapter;
 import com.huangjiahao.bean.City;
 import com.huangjiahao.util.HttpCallbackListener;
@@ -43,7 +44,7 @@ public class PickProvinceActivity extends Activity { //选择城市的活动
                     ArrayList<City> arr = JsonDecode.CityDecode(response);
                     final List<City> list = ListChange.toGetProvince(arr);
                     mPickPronviceLv = (ListView) findViewById(R.id.pick_province_lv);
-                    PickProvinceAdapter adapter = new PickProvinceAdapter(PickProvinceActivity.this,R.layout.pick_province_item,list);
+                    MyPickProvinceAdapter adapter = new MyPickProvinceAdapter(PickProvinceActivity.this, list);
                     mPickPronviceLv.setAdapter(adapter);
                     mPickPronviceLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                         @Override

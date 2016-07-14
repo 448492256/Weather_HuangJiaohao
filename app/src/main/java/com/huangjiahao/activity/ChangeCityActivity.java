@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.huangjiahao.R;
 import com.huangjiahao.adapter.CityAdapter;
+import com.huangjiahao.adapter.MyCityAdapter;
 import com.huangjiahao.bean.City;
 
 import java.util.ArrayList;
@@ -32,7 +33,7 @@ public class ChangeCityActivity extends Activity implements View.OnClickListener
         findViewById(R.id.change_city_bt_search).setOnClickListener(this);
         findViewById(R.id.change_city_bt_pick).setOnClickListener(this);
         initCities(); //初始化一些城市的数据
-        CityAdapter adapter = new CityAdapter(ChangeCityActivity.this, R.layout.city_item, cityList);
+        MyCityAdapter adapter = new MyCityAdapter(ChangeCityActivity.this,cityList);
         mChangeCityEt = (EditText) findViewById(R.id.change_city_et_write);
         mChangeCityLv = (ListView) findViewById(R.id.change_city_lv);
         mChangeCityLv.setAdapter(adapter);
